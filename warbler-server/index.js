@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const errorHandler = require("./handlers/error");
 
 const PORT = 8081
 
@@ -16,6 +17,8 @@ app.use(function(req,res,next){
     next(err);
 
 });
+
+app.use(errorHandler)
 
 app.listen(PORT, function() {
     console.log (`Server is startinig on ${PORT}`);
