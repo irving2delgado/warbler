@@ -1,4 +1,4 @@
-import { ADD_ERROR, REMOVE_ERROR } from "../actionsTypes";
+import { ADD_ERROR, REMOVE_ERROR } from "../actionTypes";
 
 export default (state = {message: null }, action) => {
     switch (action.type) {
