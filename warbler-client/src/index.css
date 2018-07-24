@@ -1,5 +1,36 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  background-color: #e6ecf0;
+}
+
+/* Nav */
+
+.navbar {
+  margin-bottom: 1rem;
+}
+
+.navbar a {
+  font-weight: bold;
+}
+
+.navbar li:hover {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navbar-brand > img {
+  display: inline-block;
+  width: 20px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+ul.nav.navbar-nav li {
+  margin: 0 0.5rem;
+}
+
+.onboarding > .navbar {
+  background-image: url("https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=488378cf5697574c717752de2b84518e&auto=format&fit=crop&w=1953&q=80");
+  background-size:100%;
 }
