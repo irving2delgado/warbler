@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
+import Homepage from "../components/Homepage"
 
 const Main = props => {
     return(
@@ -18,4 +19,4 @@ function mapStateToProps(state){
     };
 }
 
-export default withRouter()
+export default withRouter(connect(mapStateToProps, null)(Main));

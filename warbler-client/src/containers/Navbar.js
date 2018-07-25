@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import Logo from "../images/logo1.jpg";
+import Logo from "../images/logo21.png";
 
 class Navbar extends Component {
     render(){
