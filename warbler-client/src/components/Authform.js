@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class AuthForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = {      /* set default state of AuthForm */
             email: "",
             username: "",
             password: "",
@@ -18,9 +18,17 @@ export default class AuthForm extends Component {
         });
     };
 
+    handleSubmit = e => {
+        e.prevenDefault();
+        const authType = this.props.signUp ? "signup" : "signin";
+        this.props.onAuth(authType, this.state).then(() => {
+            console.log("Logged in!");
+        })
+    };
+
     render(){
         const { email, username, password, profileImageUrl } = this.state;
-        const { heading, buttonText, signUp } = this.props;
+        const { heading, buttonText, signUp } = this.props; 
         return(
             <div>
                 <div className="row justify-content-md-center text-center">
@@ -66,6 +74,11 @@ export default class AuthForm extends Component {
                         />
                                 </div>
                         )}
+                        <button 
+                        type="submit" 
+                        className="btn btn-primary btn-block btn-lg">
+                            {buttonText}
+                        </button>
                     </form>
                 </div>
                 </div>
