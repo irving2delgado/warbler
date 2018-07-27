@@ -7,7 +7,7 @@ import { authUser }  from "../store/actions/auth";
 
 const Main = props => {
     const { authUser } = props;
-    return(
+    return (
         <div className="container">
             <Switch>
                 <Route exact path="/" render={props => <Homepage {...props} />} />

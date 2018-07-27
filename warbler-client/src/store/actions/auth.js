@@ -16,6 +16,9 @@ export function authUser(type, userData){
                 localStorage.setItem("jwtToken", token);
                 dispatch(setCurrentUser(user));
                 resolve();
+            })
+            .catch(err => {
+                reject();
             });
         });
     };
